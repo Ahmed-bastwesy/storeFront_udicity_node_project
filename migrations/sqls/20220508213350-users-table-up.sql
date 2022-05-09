@@ -1,0 +1,12 @@
+
+create type catagory as enum('admin', 'user');
+
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    firstName VARCHAR(100) NOT NULL,
+    lastName VARCHAR(100) NOT NULL,
+    userName VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    superUser catagory Null
+);
+

@@ -1,0 +1,16 @@
+{
+    "dev": {
+      "driver": "pg",
+      "host": "127.0.0.1",
+      "database": "storeFront",
+      "user": "postgres",
+      "password": "123"
+    },
+    "test": {
+      "driver": "pg",
+      "host": "127.0.0.1",
+      "database": "storeFront_test",
+      "user": "postgres",
+      "password": "123"
+    }
+  }
