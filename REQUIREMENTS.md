@@ -30,7 +30,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 ## Data Shapes
 #### Product
    Columns    |           Type
-------------- | ---------------------------
+------------- | --------------------------
     id        |     integer
     name      |     character varying(200)
     price     |     iteger
