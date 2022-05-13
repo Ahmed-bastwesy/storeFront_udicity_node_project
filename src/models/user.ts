@@ -4,20 +4,20 @@ import Client from '../database';
 const { BCRYPT_PASSWORD, SALT_ROUNDS } = process.env;
 
 export type User = {
-  id?: number;
-  firstName?: string;
-  lastName?: string;
-  userName?: string;
+  id?: number ;
+  firstname?: string;
+  lastname?: string;
+  username?: string;
   password: string;
-  superUser?: string;
+  superuser?: string;
 };
 
 export type UserShow = {
   id?: number;
-  firstName?: string;
-  lastName?: string;
-  userName?: string;
-  superUser?: string;
+  firstname?: string;
+  lastname?: string;
+  username?: string;
+  superuser?: string;
 };
 
 export class UserStore {
@@ -56,16 +56,16 @@ export class UserStore {
       );
       const conn = await Client.connect();
       const result = await conn.query(sql, [
-        user.firstName,
-        user.lastName,
-        user.userName,
+        user.firstname,
+        user.lastname,
+        user.username,
         hash,
-        user.superUser
+        user.superuser
       ]);
       conn.release();
       return result.rows[0];
     } catch (err) {
-      throw new Error(`Could not add new user ${user.userName}. ${err}`);
+      throw new Error(`Could not add new user ${user.username}. ${err}`);
     }
   }
 
@@ -75,15 +75,15 @@ export class UserStore {
         'UPDATE users SET firstName = $1, lastName = $2 , userName = $3 WHERE id = $4 RETURNING *';
       const conn = await Client.connect();
       const result = await conn.query(sql, [
-        newUserData.firstName,
-        newUserData.lastName,
-        newUserData.userName,
+        newUserData.firstname,
+        newUserData.lastname,
+        newUserData.username,
         id
       ]);
       conn.release();
       return result.rows[0];
     } catch (err) {
-      throw new Error(`Could not update user ${newUserData.userName} . ${err}`);
+      throw new Error(`Could not update user ${newUserData.username} . ${err}`);
     }
   }
 

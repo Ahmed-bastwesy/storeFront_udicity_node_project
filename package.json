@@ -6,7 +6,9 @@
   "scripts": {
     "server": "nodemon src/server.ts",
     "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./src --onSuccess 'node ./dist/server.js'",
-    "test": "db-migrate --env test up && ENV=test jasmine-ts --config jasmine.json || db-migrate --env test down",
+    "jasmine": "db-migrate --env test up && ENV=test jasmine && db-migrate --env test down",
+    "build":"npx tsc",
+    "test":"npm run build && npm run jasmine",
     "db-up": "db-migrate up",
     "db-down": "db-migrate down",
     "prettify": "prettier --config .prettierrc.json src --write"
@@ -37,6 +39,7 @@
     "nodemon": "^2.0.16",
     "prettier": "^2.6.2",
     "supertest": "^6.2.3",
+    "ts-loader": "^9.3.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.6.4"
   },

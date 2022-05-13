@@ -16,15 +16,15 @@ const index = async (req: Request, res: Response) => {
 const create = async (req: Request, res: Response) => {
   try {
     const addUser: User = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      userName: req.body.userName,
+      firstname: req.body.firstName,
+      lastname: req.body.lastName,
+      username: req.body.userName,
       password: req.body.password
     };
     if (
-      addUser.firstName === undefined ||
-      addUser.lastName === undefined ||
-      addUser.userName === undefined ||
+      addUser.firstname === undefined ||
+      addUser.lastname === undefined ||
+      addUser.username === undefined ||
       addUser.password === undefined
     ) {
       res.status(400);
@@ -34,7 +34,7 @@ const create = async (req: Request, res: Response) => {
       return;
     }
     if (req.body.superUser === undefined) {
-      addUser.superUser = 'user';
+      addUser.superuser = 'user';
     } else if (
       req.body.superUser !== 'admin' &&
       req.body.superUser !== 'user'
@@ -43,7 +43,7 @@ const create = async (req: Request, res: Response) => {
       res.send('superUser must be admin or user  ');
       return;
     } else {
-      addUser.superUser = req.body.superUser;
+      addUser.superuser = req.body.superUser;
     }
 
     const newUser = await user.create(addUser);
@@ -75,9 +75,9 @@ const update = async (req: Request, res: Response): Promise<void> => {
   try {
     const id = req.params.id as unknown as number;
     const editUser: UserShow = {
-      firstName: req.body.firstName as unknown as string,
-      lastName: req.body.lastName as unknown as string,
-      userName: req.body.userName as unknown as string
+      firstname: req.body.firstName as unknown as string,
+      lastname: req.body.lastName as unknown as string,
+      username: req.body.userName as unknown as string
     };
     if (id === undefined) {
       res.status(400);
@@ -85,9 +85,9 @@ const update = async (req: Request, res: Response): Promise<void> => {
       return;
     }
     if (
-      editUser.firstName === undefined ||
-      editUser.lastName === undefined ||
-      editUser.userName === undefined
+      editUser.firstname === undefined ||
+      editUser.lastname === undefined ||
+      editUser.username === undefined
     ) {
       res.status(400);
       res.send('this field is required firstName, lastName , userName ');

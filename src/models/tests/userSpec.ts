@@ -1,4 +1,4 @@
-import { UserStore } from '../user';
+import { User, UserShow, UserStore } from '../user';
 
 const user = new UserStore();
 
@@ -24,44 +24,44 @@ describe('User Model', () => {
   });
 
   it('create method should add a user', async () => {
-    const result = await user.create({
-      firstName: 'Ahmed',
-      lastName: 'Bastwesy',
-      userName: ' Ahmed Reda',
+    const result :User = await user.create({
+      id:1,
+      firstname: 'Ahmed',
+      lastname: 'Bastwesy',
+      username: ' Ahmed Reda',
       password: '123',
-      superUser: 'admin'
+      superuser: 'admin'
     });
-    expect(result).toEqual({
-      id: 1,
-      firstName: 'Ahmed',
-      lastName: 'Bastwesy',
-      userName: ' Ahmed Reda',
-      password: '$2b$10$AD4.Ayicqg/GuSO.Z1.AwunbPrYkp0AqjCKdzIZPyBjq/JuUaqXvm',
-      superUser: 'admin'
-    });
+    if(result){
+      expect(result.firstname).toEqual('Ahmed');
+      expect(result.lastname).toEqual('Bastwesy');
+      expect(result.username).toEqual(' Ahmed Reda');
+      expect(result.superuser).toEqual('admin');
+    }
   });
 
   it('index method should return a list of users', async () => {
-    const result = await user.index();
-    expect(result).toEqual([
+    
+    const result1 :UserShow[]= await user.index();
+    expect(result1).toEqual([
       {
         id: 1,
-        firstName: 'Ahmed',
-        lastName: 'Bastwesy',
-        userName: ' Ahmed Reda',
-        superUser: 'admin'
-      }
+        firstname: 'Ahmed',
+        lastname: 'Bastwesy',
+        username: ' Ahmed Reda',
+        superuser: 'admin'
+      },
     ]);
   });
 
   it('show method should return the correct user', async () => {
-    const result = await user.show(1);
-    expect(result).toEqual({
+    const result1 :UserShow= await user.show(1);
+    expect(result1).toEqual({
       id: 1,
-      firstName: 'Ahmed',
-      lastName: 'Bastwesy',
-      userName: ' Ahmed Reda',
-      superUser: 'admin'
+      firstname: 'Ahmed',
+      lastname: 'Bastwesy',
+      username: ' Ahmed Reda',
+      superuser: 'admin'
     });
   });
 
