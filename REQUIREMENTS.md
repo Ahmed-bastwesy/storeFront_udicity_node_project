@@ -29,10 +29,13 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 ## Data Shapes
 #### Product
--  id
-- name
-- price
-- category
+   Columns    |     Type
+------------- | -------------
+    id        |     integer
+    name      |     character varying(200)
+    price     |     iteger
+    catagory  |     character varying(200)
+
 
 #### User
 - id
