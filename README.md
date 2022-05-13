@@ -1,8 +1,8 @@
 # storeFront_udicity_node_project
 ### Database 
--database is running on default port 5432.
--you must create two databse one for test and the second for use
--make sure that if you change name of database that you must change it in database.json and .env
+-database is running on default port 5432.<br/>
+-you must create two databse one for test and the second for use.<br/>
+-make sure that if you change name of database that you must change it in database.json and .env<br/>
 * to create database        ``` CREATE DATABSE storeFront ;```
 * to create second database ``` CREATE DATABSE storeFront_test ;```
 * config .env and put data about database and all missing data like this :<br/>
@@ -17,8 +17,8 @@
     -```TOKEN_SECRET=###      <- write text that will join to encrypt token```<br/>
     
 ### Server
--The server will listen on port 4000:
--to run server successfull
+-The server will listen on port 4000:<br/>
+-to run server successfull<br/>
 * run in terminal ```npm install``` to install all packages
 * make sure that you do the database steps and server of database is run in correct port and you create the two databases
 * run server in terminal by ```npm run server```
