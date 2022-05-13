@@ -29,24 +29,46 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 ## Data Shapes
 #### Product
--  id
-- name
-- price
-- category
+ Columns      |            Type
+------------- | --------------------------
+    id        |     integer
+    name      |     character varying(200)
+    price     |     iteger
+    catagory  |     character varying(200)
+
 
 #### User
-- id
-- firstName
-- lastName
-- password
+ Columns      |            Type
+------------- | --------------------------
+  id          |     integer
+  firstName   |     character varying(100)
+  lastName    |     character varying(100)
+  userName    |     character varying(100)
+  password    |     character varying(100)
+  superUser   |     catagory (type)
 
+### Catagory type
+ Columns      |            Type
+------------- | -------------------------
+  catagory    |     ENUM('admin', 'user')
+ 
 #### Orders
-- id
-- user_id
-- status of order (active or complete)
+ Columns      |            Type
+------------- | -----------------------
+  id          |     integer
+  user_id     |     integer (fkey)
+  status      |     orderstatus (type)
+
+### Catagory type
+ Columns      |            Type
+------------- | -------------------------------
+ orderstatus  |     ENUM('active', 'completed')
 
 #### Order_products
-- order_id
-- product_id
-- quantity 
+ Columns      |        Type
+------------- | ------------------
+  order_id    |     integer (fkey)
+  product_id  |     integer (fkey)
+  quantity    |     integer
+ 
 
