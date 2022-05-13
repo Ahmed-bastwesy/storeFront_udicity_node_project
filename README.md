@@ -11,7 +11,7 @@
     -```POSTGRES_TEST_DB=storeFront_test```<br/>
     -```POSTGRES_USER=###     <- write your user here```<br/>
     -```POSTGRES_PASSWORD=### <- write your password here```<br/>
-    -```ENV=dev```__
+    -```ENV=dev```<br/>
     -```BCRYPT_PASSWORD=###   <- write text that will join to encrypt password```<br/>
     -```SALT_ROUNDS=10```<br/>
     -```TOKEN_SECRET=###      <- write text that will join to encrypt token```<br/>
