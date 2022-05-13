@@ -6,15 +6,15 @@
 * to create database        ``` CREATE DATABSE storeFront ;```
 * to create second database ``` CREATE DATABSE storeFront_test ;```
 * config .env and put data about database and all missing data like this :
-    -POSTGRES_HOST=127.0.0.1
-    -POSTGRES_DB=storeFront
-    -POSTGRES_TEST_DB=storeFront_test
-    -POSTGRES_USER=###     <- write your user here
-    -POSTGRES_PASSWORD=### <- write your password hers
-    -ENV=dev
-    -BCRYPT_PASSWORD=###   <- write text that will join to encrypt password
-    -SALT_ROUNDS=10
-    -TOKEN_SECRET=###      <- write text that will join to encrypt token
+    ```POSTGRES_HOST=127.0.0.1```
+    ```POSTGRES_DB=storeFront```
+    ```POSTGRES_TEST_DB=storeFront_test```
+    ```POSTGRES_USER=###     <- write your user here```
+    ```POSTGRES_PASSWORD=### <- write your password here```
+    ```ENV=dev```
+    ```BCRYPT_PASSWORD=###   <- write text that will join to encrypt password```
+    ```SALT_ROUNDS=10```
+    ```TOKEN_SECRET=###      <- write text that will join to encrypt token```
     
 ### Server
 -The server will listen on port 4000:
