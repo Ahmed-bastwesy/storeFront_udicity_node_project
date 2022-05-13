@@ -5,16 +5,16 @@
 -make sure that if you change name of database that you must change it in database.json and .env
 * to create database        ``` CREATE DATABSE storeFront ;```
 * to create second database ``` CREATE DATABSE storeFront_test ;```
-* config .env and put data about database and all missing data like this :
-    ```POSTGRES_HOST=127.0.0.1```<br/>
-    ```POSTGRES_DB=storeFront```<br/>
-    ```POSTGRES_TEST_DB=storeFront_test```__
-    ```POSTGRES_USER=###     <- write your user here```__
-    ```POSTGRES_PASSWORD=### <- write your password here```__
-    ```ENV=dev```__
-    ```BCRYPT_PASSWORD=###   <- write text that will join to encrypt password```__
-    ```SALT_ROUNDS=10```__
-    ```TOKEN_SECRET=###      <- write text that will join to encrypt token```__
+* config .env and put data about database and all missing data like this :<br/>
+    -```POSTGRES_HOST=127.0.0.1```<br/>
+    -```POSTGRES_DB=storeFront```<br/>
+    -```POSTGRES_TEST_DB=storeFront_test```<br/>
+    -```POSTGRES_USER=###     <- write your user here```<br/>
+    -```POSTGRES_PASSWORD=### <- write your password here```<br/>
+    -```ENV=dev```__
+    -```BCRYPT_PASSWORD=###   <- write text that will join to encrypt password```<br/>
+    -```SALT_ROUNDS=10```<br/>
+    -```TOKEN_SECRET=###      <- write text that will join to encrypt token```<br/>
     
 ### Server
 -The server will listen on port 4000:
