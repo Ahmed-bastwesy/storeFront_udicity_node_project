@@ -29,7 +29,7 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 ## Data Shapes
 #### Product
-   Columns    |           Type
+ Columns      |            Type
 ------------- | --------------------------
     id        |     integer
     name      |     character varying(200)
@@ -47,14 +47,28 @@ These are the notes from a meeting with the frontend developer that describe wha
   password    |     character varying(100)
   superUser   |     catagory (type)
 
-
+### Catagory type
+ Columns      |            Type
+------------- | -------------------------
+  catagory    |     ENUM('admin', 'user')
+ 
 #### Orders
-- id
-- user_id
-- status of order (active or complete)
+ Columns      |            Type
+------------- | -----------------------
+  id          |     integer
+  user_id     |     integer (fkey)
+  status      |     orderstatus (type)
+
+### Catagory type
+ Columns      |            Type
+------------- | -------------------------------
+ orderstatus  |     ENUM('active', 'completed')
 
 #### Order_products
-- order_id
-- product_id
-- quantity 
+ Columns      |        Type
+------------- | ------------------
+  order_id    |     integer (fkey)
+  product_id  |     integer (fkey)
+  quantity    |     integer
+ 
 
