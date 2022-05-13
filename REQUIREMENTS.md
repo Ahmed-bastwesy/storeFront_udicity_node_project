@@ -38,10 +38,14 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 
 #### User
-- id
-- firstName
-- lastName
-- password
+------------- | -------------
+  id          |     integer
+  firstName   |     character varying(100)
+  lastName    |     character varying(100)
+  userName    |     character varying(100)
+  password    |     character varying(100)
+  superUser   |     catagory (type)
+
 
 #### Orders
 - id
