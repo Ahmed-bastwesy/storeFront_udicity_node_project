@@ -29,8 +29,8 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 ## Data Shapes
 #### Product
-   Columns    |     Type
-------------- | -------------
+   Columns    |           Type
+------------- | ---------------------------
     id        |     integer
     name      |     character varying(200)
     price     |     iteger
@@ -38,7 +38,8 @@ These are the notes from a meeting with the frontend developer that describe wha
 
 
 #### User
-------------- | -------------
+ Columns      |            Type
+------------- | --------------------------
   id          |     integer
   firstName   |     character varying(100)
   lastName    |     character varying(100)
