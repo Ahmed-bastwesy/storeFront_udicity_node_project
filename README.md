@@ -6,8 +6,8 @@
 * to create database        ``` CREATE DATABSE storeFront ;```
 * to create second database ``` CREATE DATABSE storeFront_test ;```
 * config .env and put data about database and all missing data like this :
-    ```POSTGRES_HOST=127.0.0.1``` __
-    ```POSTGRES_DB=storeFront```__
+    ```POSTGRES_HOST=127.0.0.1```<br/>
+    ```POSTGRES_DB=storeFront```<br/>
     ```POSTGRES_TEST_DB=storeFront_test```__
     ```POSTGRES_USER=###     <- write your user here```__
     ```POSTGRES_PASSWORD=### <- write your password here```__
